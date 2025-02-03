@@ -1,0 +1,7 @@
+:host {
+  background-color: #000; /* Define o fundo preto para toda a aplicação */
+  color: #fff; /* Mantém o texto branco para contraste */
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}

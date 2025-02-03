@@ -1,0 +1,119 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Container principal */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a, #121212);
+  padding: 20px;
+}
+
+/* Caixa de login */
+.login-box {
+  background: #1f1f1f;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+/* Títulos */
+h1 {
+  color: #bb86fc;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.input-field,
+.input-file {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-field::placeholder {
+  color: #bbb;
+}
+
+.input-field:focus,
+.input-file:focus {
+  background: #444;
+  box-shadow: 0 0 8px #bb86fc;
+}
+
+/* Imagem de perfil */
+.profile-preview {
+  margin-bottom: 15px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #bb86fc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Botão de entrada */
+.btn-enter {
+  width: 100%;
+  padding: 12px;
+  background: #bb86fc;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn-enter:hover {
+  background: #9a67ea;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .login-box {
+    padding: 25px;
+  }
+
+  .input-field,
+  .input-file,
+  .btn-enter {
+    font-size: 14px;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+}

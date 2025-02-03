@@ -1,0 +1,36 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <img [src]="userImage" alt="Foto de perfil" class="header-image" />
+    <h2>{{ username }}</h2>
+  </div>
+
+  <div class="chat-messages">
+    <div
+      *ngFor="let msg of messages"
+      [ngClass]="{ 'my-message': msg.mine, 'other-message': !msg.mine }"
+      class="message"
+    >
+      <div class="message-header">
+        <img
+          [src]="msg.userImage || 'assets/default-user.png'"
+          alt="Foto de perfil"
+          class="message-image"
+        />
+        <span class="message-username">{{ msg.username }}</span>
+        <span class="message-time">{{ msg.time | date : "shortTime" }}</span>
+      </div>
+      <p class="message-text">{{ msg.text }}</p>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input
+      [(ngModel)]="message"
+      placeholder="Digite sua mensagem..."
+      class="input-message"
+      (focus)="onFocusInput()"
+      (blur)="onBlurInput()"
+    />
+    <button (click)="sendMessage()" class="btn-send">Enviar</button>
+  </div>
+</div>

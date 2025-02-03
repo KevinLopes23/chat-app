@@ -1,0 +1,17 @@
+<div class="login-container">
+    <div class="login-box">
+      <h1>Bem-vindo ao Chat</h1>
+      <p>Digite seu nome e escolha uma foto para começar</p>
+      
+      <input [(ngModel)]="username" class="input-field" placeholder="Digite seu nome" />
+      
+      <input type="file" (change)="onFileChange($event)" class="input-file" />
+      
+      <div *ngIf="imageUrl" class="profile-preview">
+        <img [src]="imageUrl" alt="Foto de perfil" class="profile-image" />
+      </div>
+      
+      <button (click)="startChat()" class="btn-enter">Entrar no Chat</button>
+    </div>
+  </div>
+  
